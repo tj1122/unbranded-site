@@ -771,6 +771,7 @@ footer aside img {
 .break-it #top svg {
   align-self: center;
   justify-self: center;
+  visibility: hidden;
 }
 .break-it #top svg:nth-child(1) {
   -ms-grid-row: 3;

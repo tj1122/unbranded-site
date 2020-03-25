@@ -14,6 +14,7 @@ $(".next-btn").on("click", function(){
     fullpage_api.moveSectionDown();
 });
 
+gsap.set("svg", {visibility:"visible"});
 gsap.set("#unbranded-tagline, #num-and-lines, #google-num",{alpha: 0});
 gsap.set("#u-alt, #n-alt, #b-alt, #r-alt, #a-alt, #n2-alt, #d-alt, #e-alt, #d2-alt",{alpha:0, transformOrigin: "center"});
 gsap.set("#google-article, #google-next, #netflix-next, #netflix-article, #twitter-next, #twitter-article, #spotify-next, #spotify-article, #walmart-next, #walmart-article, #tom-falzani, #microsoft-article, #hero-btn",{visibility:"hidden", alpha:0});
