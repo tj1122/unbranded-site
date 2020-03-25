@@ -1,20 +1,22 @@
 $(document).ready(function() {
-  // console.log( "ready!" );
-  // register Greensock plugins
-  gsap.registerPlugin(DrawSVGPlugin, MorphSVGPlugin, ScrollToPlugin);
+  // registers Greensock MorphSVG plugin
+  gsap.registerPlugin(MorphSVGPlugin);
 });
 
+// initiate fullPage.js
 new fullpage('#fullPage', {
-	//options here
+	//fullPage.js options
   licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
 	autoScrolling:true,
 });
 
+// Goes to next section when user click on "Break it down!" buttons using fullPage.js api
 $(".next-btn").on("click", function(){
     fullpage_api.moveSectionDown();
 });
 
-gsap.set("svg", {visibility:"visible"});
+// sets elements and svgs in place when page first loads
+gsap.set("article, svg, a", {visibility:"visible"});
 gsap.set("#unbranded-tagline, #num-and-lines, #google-num",{alpha: 0});
 gsap.set("#u-alt, #n-alt, #b-alt, #r-alt, #a-alt, #n2-alt, #d-alt, #e-alt, #d2-alt",{alpha:0, transformOrigin: "center"});
 gsap.set("#google-article, #google-next, #netflix-next, #netflix-article, #twitter-next, #twitter-article, #spotify-next, #spotify-article, #walmart-next, #walmart-article, #tom-falzani, #microsoft-article, #hero-btn",{visibility:"hidden", alpha:0});
@@ -23,6 +25,8 @@ gsap.set("#spotify-text2",{y: 10164.584, alpha: 0})
 gsap.set("#lightbulb",{alpha: 0})
 gsap.set("#ms-pattern2, #ms-pattern3, #ms-pattern4, #ms-pattern5",{x:-51 , y: 203.013})
 
+
+// animtaions for the hero section
 var fadeInHero = gsap.timeline({});
 
 fadeInHero.to("#unbranded-text1, #unbranded-tagline",{duration:1, alpha:1, delay: .5})
@@ -37,6 +41,7 @@ fadeInHero.to("#unbranded-text1, #unbranded-tagline",{duration:1, alpha:1, delay
 .to("#d2-norm",{duration:0.5, morphSVG:"#d2-alt", transformOrigin:"50% 50%"}, "unbranded")
 .to("#hero-btn",{duration:1, visibility:"visible", alpha:1});
 
+// animtaions for the google section
 var googleClicked = false;
 var googleAnimate = gsap.timeline({paused:true});
 var googleTextAnimate = gsap.timeline({paused:true});
@@ -63,8 +68,7 @@ $( "#google-break-it-btn" ).on( "click", function() {
   }
 });
 
-
-
+// animtaions for the netflix section
 var netflixClicked = false;
 var netflixAnimate = gsap.timeline({paused:true});
 var netflixTextAnimate = gsap.timeline({paused:true});
@@ -89,6 +93,7 @@ $( "#netflix-break-it-btn" ).on( "click", function() {
   }
 });
 
+// animtaions for the twitter section
 var twitterClicked = false;
 var twitterAnimate = gsap.timeline({paused:true});
 var twitterTextAnimate = gsap.timeline({paused:true});
@@ -116,6 +121,7 @@ $( "#twitter-break-it-btn" ).on( "click", function() {
   }
 });
 
+// animtaions for the spotify section
 var spotifyClicked = false;
 var spotifyAnimate = gsap.timeline({paused:true});
 var spotifyTextAnimate = gsap.timeline({paused:true});
@@ -141,6 +147,7 @@ $( "#spotify-break-it-btn" ).on( "click", function() {
   }
 });
 
+// animtaions for the walmart section
 var walmartClicked = false;
 var walmartAnimate = gsap.timeline({paused:true});
 var walmartTextAnimate = gsap.timeline({paused:true});
@@ -166,6 +173,7 @@ $( "#walmart-break-it-btn" ).on( "click", function() {
   }
 });
 
+// animtaions for the microsoft section
 var microsoftClicked = false;
 var microsoftAnimate = gsap.timeline({paused:true});
 var microsoftTextAnimate = gsap.timeline({paused:true});
