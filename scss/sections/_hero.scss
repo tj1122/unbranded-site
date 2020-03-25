@@ -1,0 +1,53 @@
+/* =============
+    Hero
+============= */
+#hero {
+
+  .fp-tableCell {
+    background-image: url("../img/hero/hero-mobile.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+
+    @include md{
+      background-image: url("../img/hero/hero-tablet.jpg");
+    }
+
+    @include lg{
+      background-image: url("../img/hero/hero.jpg");
+      height: 100vh;
+    }
+  }
+
+  svg{
+    height: 60px;
+    align-self: flex-end;
+
+    @include md{
+      height: 100px;
+    }
+
+    @include lg{
+      height: 100px;
+    }
+  }
+
+  a {
+    text-align: center;
+
+    div {
+      display: inline-block;
+      cursor: pointer;
+
+      h4 {
+        padding-bottom: 5px;
+        font-size: rem-calc(30);
+      }
+    }
+  }
+}

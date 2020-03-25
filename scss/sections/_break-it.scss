@@ -1,0 +1,175 @@
+/* =============
+    Break It
+============= */
+.break-it {
+  .fp-tableCell {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 2fr;
+    grid-gap: 20px;
+  }
+
+  #top {
+    display: grid;
+    grid-gap: 40px;
+    grid-template-rows: 1fr 1fr;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "logo" "btn";
+    @include lg {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0 0;
+      justify-content: center;
+      align-items: center;
+      grid-template-areas: "btn logo";
+    }
+
+    svg {
+      align-self: center;
+      justify-self: center;
+    }
+
+    svg:nth-child(1) {
+      grid-area: btn;
+      align-self: flex-end;
+      justify-self: center;
+      @include lg {
+        align-self: center;
+      }
+    }
+
+    svg:nth-child(2) {
+      grid-area: logo;
+    }
+
+    #google-svg {
+      height: 70px;
+    }
+
+    #twitter-svg {
+      height: 70px;
+    }
+
+    #spotify-svg {
+      height: 70px;
+    }
+
+    #walmart-svg {
+      height: 70px;
+    }
+
+    #microsoft-svg {
+      height: 70px;
+    }
+
+    .break-it-btns {
+      cursor: pointer;
+    }
+  }
+
+  #netflix-top {
+    display: grid;
+    grid-gap: 0;
+    grid-template-rows: 1fr 1fr;
+    align-self: flex-end;
+    justify-content: center;
+    align-items: center;
+    grid-template-areas: "logo" "btn";
+    @include lg {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 0 0;
+      justify-content: center;
+      align-items: center;
+      grid-gap: 40px;
+      grid-template-areas: "btn logo";
+    }
+
+    svg {
+      align-self: center;
+      justify-self: center;
+    }
+
+    svg:nth-child(1) {
+      grid-area: btn;
+      align-self: flex-end;
+      justify-self: center;
+      @include lg {
+        align-self: center;
+      }
+    }
+
+    svg:nth-child(2) {
+      grid-area: logo;
+      margin-bottom: -35px;
+      @include lg {
+        margin-bottom: 0;
+      }
+    }
+
+    #netflix-svg {
+      height: 140px;
+    }
+
+    .break-it-btns {
+      cursor: pointer;
+    }
+  }
+
+  aside {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 40px;
+    padding: 0 20px;
+    @include md {
+      padding: 0 120px;
+    }
+    @include lg {
+      padding: 0 150px;
+    }
+
+    article {
+      font-size: rem-calc(20);
+      text-align: center;
+
+      h3 {
+        font-weight: 900;
+        padding-bottom: 5px;
+      }
+
+      p {
+        text-decoration: underline;
+        cursor: pointer;
+        display: inline-block;
+      }
+    }
+
+    a {
+      text-align: center;
+
+      div {
+        display: inline-block;
+        cursor: pointer;
+
+        h4 {
+          padding-bottom: 5px;
+          font-size: rem-calc(30);
+        }
+
+        span {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  a {
+    color: $black;
+  }
+
+  a:visited {
+    color: $black;
+  }
+}
