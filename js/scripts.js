@@ -57,7 +57,7 @@ googleTextAnimate.to("#google-article",{duration:1.5, visibility:"visible", dela
 .to("#google-next",{duration:1.5, visibility:"visible", alpha:1, delay: .5});
 
 $( "#google-break-it-btn" ).on( "click", function() {
-  console.log("click");
+  //console.log("click");
   if(googleClicked === false){
       googleAnimate.play();
       googleTextAnimate.play();
@@ -82,7 +82,7 @@ netflixTextAnimate.to("#netflix-article",{duration:1.5, visibility:"visible", de
 .to("#netflix-next",{duration:1.5, visibility:"visible", alpha:1, delay: .5});
 
 $( "#netflix-break-it-btn" ).on( "click", function() {
-  console.log("click");
+  //console.log("click");
   if(netflixClicked === false){
       netflixAnimate.play();
       netflixTextAnimate.play();
@@ -110,7 +110,7 @@ twitterTextAnimate.to("#twitter-article",{duration:1.5, visibility:"visible", de
 .to("#twitter-next",{duration:1.5, visibility:"visible", alpha:1, delay: .5});
 
 $( "#twitter-break-it-btn" ).on( "click", function() {
-  console.log("click");
+  //console.log("click");
   if(twitterClicked === false){
       twitterAnimate.play();
       twitterTextAnimate.play();
@@ -136,7 +136,7 @@ spotifyTextAnimate.to("#spotify-article",{duration:1.5, visibility:"visible", de
 .to("#spotify-next",{duration:1.5, visibility:"visible", alpha:1, delay: .5});
 
 $( "#spotify-break-it-btn" ).on( "click", function() {
-  console.log("click");
+  //console.log("click");
   if(spotifyClicked === false){
       spotifyAnimate.play();
       spotifyTextAnimate.play();
@@ -162,7 +162,7 @@ walmartTextAnimate.to("#walmart-article",{duration:1.5, visibility:"visible", de
 .to("#walmart-next",{duration:1.5, visibility:"visible", alpha:1, delay: .5});
 
 $( "#walmart-break-it-btn" ).on( "click", function() {
-  console.log("click");
+  //console.log("click");
   if(walmartClicked === false){
       walmartAnimate.play();
       walmartTextAnimate.play();
@@ -191,7 +191,7 @@ microsoftTextAnimate.to("#microsoft-article",{duration:1.5, visibility:"visible"
 .to("#tom-falzani",{duration:1.5, visibility:"visible", alpha:1, delay: .5});
 
 $( "#microsoft-break-it-btn" ).on( "click", function() {
-  console.log("click");
+  //console.log("click");
   if(microsoftClicked === false){
       microsoftAnimate.play();
       microsoftTextAnimate.play();
